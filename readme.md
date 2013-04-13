@@ -13,7 +13,16 @@ ToDo:
 ====================
  + add SQL statements to insert theme options to database
  
- 
+
+Hints
+====================
+Based on this tutorial how to rework the theme:
+http://wiki.oxidforge.org/Tutorials/use_basic_theme_from_version_4.7_and_5.0_on
+
+Additional issues from this thread in OXID Community Forum:
+http://forum.oxid-esales.com/showthread.php?t=17126
+
+
 License
 ====================
 This file is part of OXID eShop Community Edition.
