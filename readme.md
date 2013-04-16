@@ -6,21 +6,18 @@ If you have an individual child theme based on "Basic" and want to use it in new
  Installation:
 ====================
  + Copy the content of "copy_this" into your shop root
+ + execute "install.sql" in eShop admin below Service -> Tools 
  + activate theme in admin -> Extensions -> Themes
  
- 
-ToDo:
-====================
- + add SQL statements to insert theme options to database
- 
-
-Hints
+Credits
 ====================
 Based on this tutorial how to rework the theme:
 http://wiki.oxidforge.org/Tutorials/use_basic_theme_from_version_4.7_and_5.0_on
 
 Additional issues from this thread in OXID Community Forum:
 http://forum.oxid-esales.com/showthread.php?t=17126
+
+install.sql and some small issues from "eShop:source" http://eshop-source.com/basic-theme-oxid/
 
 
 License

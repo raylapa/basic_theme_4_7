@@ -1,19 +1,6 @@
-[{if $selectedStateIdPrim}]
-  [{assign var=selectedStateId value=$selectedStateIdPrim}]
-[{/if}]
-
-[{assign var=divId value=oxStateDiv_$stateSelectName}]
-[{assign var=stateSelectId value=oxStateSelect_$stateSelectName}]
-
-[{if $currCountry }]
-  [{assign var=showDiv value='true'}]
-[{else}]
-  [{assign var=showDiv value='false'}]
-[{/if}]
-[{oxscript include="js/widgets/oxcountrystateselect.js" priority=10 }]
-[{oxscript add="$( '#`$countrySelectId`' ).oxCountryStateSelect({selectedStateId:'`$selectedStateId`'});"}]
-
-<script type="text/javascript"><!--
+[{if $selectedStateIdPrim}] [{assign var=selectedStateId value=$selectedStateIdPrim}] [{/if}] [{assign var=divId value=oxStateDiv_$stateSelectName}] [{assign var=stateSelectId value=oxStateSelect_$stateSelectName}] [{if $currCountry }] [{assign var=showDiv value='true'}] [{else}] [{assign var=showDiv value='false'}] [{/if}] [{oxscript include="js/widgets/oxcountrystateselect.js" priority=10 }] [{oxscript add="$( '#`$countrySelectId`' ).oxCountryStateSelect({selectedStateId:'`$selectedStateId`'});"}] 
+<script type="text/javascript">
+	<!--
   var allStates = new Array();
   var allStateIds = new Array();
   var allCountryIds = new Object();
@@ -35,9 +22,18 @@
     allCountryIds['[{$country->getId()}]']  = cCount;
   [{/foreach}]
 
---></script>
+-->
+</script>
 <span id="[{$divId}]" class=stateSelector>
-  <select name="[{$stateSelectName}]" id="[{$stateSelectId}]">
-      <option value="">[{oxmultilang ident="STATE_PROMPT"}]</option>
-  </select>
+	<select name="[{$stateSelectName}]" id="[{$stateSelectId}]">
+		<option value="">[{oxmultilang ident="STATE_PROMPT"}]</option>
+	</select>
 </span>
+<noscript>
+	<select name="[{$stateSelectName}]">
+		<option value="">[{ oxmultilang ident="STATE_PROMPT" }]</option>[{foreach from=$oViewConf->getCountryList() item=country key=country_id }] [{assign var=countryStates value=$country->getStates()}] [{if $countryStates->count()}] 
+		<option value="">-- [{ $country->oxcountry__oxtitle->value }] --</option>[{foreach from=$countryStates item=state}] 
+		<option value="[{$state->oxstates__oxid->value}]" [{if $state->oxstates__oxid->value == $selectedStateId }]SELECTED[{/if}]>[{ $state->oxstates__oxtitle->value }]
+	</option>[{/foreach}] [{/if}] [{/foreach}] 
+</select>
+</noscript>

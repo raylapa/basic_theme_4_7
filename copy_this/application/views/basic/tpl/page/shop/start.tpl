@@ -59,7 +59,7 @@
   [{/foreach}]
 [{/if}]
 
-[{oxid_include_widget nocookie=1 cl="oxwTagCloud" blShowBox="1" noscript=1 oxwtemplate="inc/tags.tpl"}]
+[{oxid_include_widget nocookie=1 cl="oxwTagCloud" blShowBox="1" noscript=1 oxwtemplate="widget/tags.tpl"}]
 
 [{ insert name="oxid_tracker" title=$template_title }]
 [{include file="_footer.tpl" }]

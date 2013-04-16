@@ -22,6 +22,9 @@
  * @version   SVN: $Id: lang.php 28697 2010-06-29 11:09:58Z vilma $
  */
 
+$sLangName  = "English";
+
+
 $aMap = array(
 'ACCOUNT_LOGIN_BACKTOSHOP'                                    => 'BACK_TO_SHOP',
 'ACCOUNT_LOGIN_LOGIN'                                         => 'LOGIN',
@@ -43,7 +46,7 @@ $aMap = array(
 'ACCOUNT_NOTICELIST_LOCATION'                                 => 'MY_ACCOUNT_4',
 'ACCOUNT_NOTICELIST_MYWISHLIST'                               => 'MY_WISH_LIST',
 'ACCOUNT_NOTICELIST_TITLE'                                    => 'MY_WISH_LIST',
-'ACCOUNT_ORDER_ADDTOCART'                                     => 'ADD_TO_CART',
+'ACCOUNT_ORDER_ADDTOCART'                                     => 'ADD_TO_CART_2',
 'ACCOUNT_ORDER_BACKTOSHOP'                                    => 'BACK_TO_SHOP',
 'ACCOUNT_ORDER_CART'                                          => 'CART_2',
 'ACCOUNT_ORDER_DATE'                                          => 'ORDER_DATE',
@@ -402,13 +405,13 @@ $aMap = array(
 'ERR_EXPIRED_DAYS_OXIDESHOPERROR'                             => 'ERROR_MESSAGE_OXID_SHOP_ERROR2',
 'ERR_EXPIRED_DAYS_TITLE'                                      => 'ERROR_MESSAGE_OXID_SHOP_ERROR',
 'ERR_EXPIRED_DAYS_VERSIONEXPIRED1'                            => 'ERROR_MESSAGE_VERSION_EXPIRED1',
-'ERR_EXPIRED_DAYS_VERSIONEXPIRED2'                            => 'ERROR_MESSAGE_OXID_ESALES',
-'ERR_EXPIRED_DAYS_VERSIONEXPIRED3'                            => 'ERROR_MESSAGE_VERSION_EXPIRED2',
+'ERR_EXPIRED_DAYS_VERSIONEXPIRED2'                            => 'ERROR_MESSAGE_VERSION_EXPIRED2',
+'ERR_EXPIRED_DAYS_VERSIONEXPIRED3'                            => 'ERROR_MESSAGE_VERSION_EXPIRED3',
 'ERR_MANDATES_EXCEEDED_OXIDESHOPERROR'                        => 'ERROR_MESSAGE_OXID_SHOP_ERROR2',
 'ERR_MANDATES_EXCEEDED_TITLE'                                 => 'ERROR_MESSAGE_OXID_SHOP_ERROR',
 'ERR_MANDATES_EXCEEDED_VERSIONEXPIRED1'                       => 'ERROR_MESSAGE_MANDATES_EXCEEDED1',
-'ERR_MANDATES_EXCEEDED_VERSIONEXPIRED2'                       => 'ERROR_MESSAGE_OXID_ESALES',
-'ERR_MANDATES_EXCEEDED_VERSIONEXPIRED3'                       => 'ERROR_MESSAGE_MANDATES_EXCEEDED2',
+'ERR_MANDATES_EXCEEDED_VERSIONEXPIRED2'                       => 'ERROR_MESSAGE_VERSION_EXPIRED2',
+'ERR_MANDATES_EXCEEDED_VERSIONEXPIRED3'                       => 'ERROR_MESSAGE_VERSION_EXPIRED3',
 'ERR_NO_COOKIE_SUPPORT'                                       => 'MESSAGE_REQUIRES_COOKIE_SUPPORT',
 'ERR_SETUP_OXIDESHOPERROR'                                    => 'ERROR_MESSAGE_OXID_SHOP_ERROR2',
 'ERR_SETUP_TITLE'                                             => 'ERROR_MESSAGE_OXID_SHOP_ERROR',
@@ -420,8 +423,8 @@ $aMap = array(
 'ERR_UNLICENSED_OXIDESHOPERROR'                               => 'ERROR_MESSAGE_OXID_SHOP_ERROR2',
 'ERR_UNLICENSED_TITLE'                                        => 'ERROR_MESSAGE_OXID_SHOP_ERROR',
 'ERR_UNLICENSED_VERSIONEXPIRED1'                              => 'ERROR_MESSAGE_UNLICENSED1',
-'ERR_UNLICENSED_VERSIONEXPIRED2'                              => 'ERROR_MESSAGE_OXID_ESALES',
-'ERR_UNLICENSED_VERSIONEXPIRED3'                              => 'ERROR_MESSAGE_UNLICENSED2',
+'ERR_UNLICENSED_VERSIONEXPIRED2'                              => 'ERROR_MESSAGE_VERSION_EXPIRED2',
+'ERR_UNLICENSED_VERSIONEXPIRED3'                              => 'ERROR_MESSAGE_VERSION_EXPIRED3',
 'ERR_UPDATE_DELETEDIRECTORY1'                                 => 'MESSAGE_PLEASE_DELETE_FOLLOWING_DIRECTORY',
 'ERR_UPDATE_DELETEDIRECTORY2'                                 => 'MESSAGE_PLEASE_DELETE_DIRECTORY_UPDATEAPP',
 'ERR_UPDATE_OXIDESHOPERROR'                                   => 'ERROR_MESSAGE_ERROR_OCCURED',
@@ -1033,7 +1036,7 @@ $aMap = array(
 'USER_TITLE'                                                  => 'TITLE_2',
 'USER_TITLE2'                                                 => 'TITLE_2',
 'USER_VATID'                                                  => 'VAT_ID_NUMBER',
-'USER_YOURMESSAGE'                                            => 'WHAT_I_WANTED_TO_SAY',
+'USER_YOURMESSAGE'                                            => 'WHAT_I_WANT_TO_SAY',
 'WISHLIST_TITLE'                                              => 'GIFT_REGISTRY',
 'WISHLIST_WELCOME'                                            => 'GIFT_REGISTRY_OF_3',
 'WISHLIST_WISHLISTEMPTY'                                      => 'GIFT_REGISTRY_EMPTY',

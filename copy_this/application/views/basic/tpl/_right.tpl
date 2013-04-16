@@ -7,9 +7,26 @@
         [{oxid_include_dynamic file="dyn/mini_basket.tpl" type="basket" extended=true testid="RightBasket"}]
     [{/if}]
 
+	[{oxid_include_widget cl="oxwServiceMenu" _parent=$oView->getClassName() blLoginError=$blLoginError nocookie=$blAnon _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId() oxwtemplate="widget/servicemenu.tpl"}]
+	
+	[{*
+    [{if !$oView->isConnectedWithFb()}]
+    <strong class="h2"><a id="test_RightSideAccountHeader" rel="nofollow" href="[{ oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account" }]">[{ oxmultilang ident="INC_RIGHTITEM_MYACCOUNT" }]</a></strong>
+    <div class="box">
+        [{oxid_include_dynamic file="dyn/cmp_login_right.tpl" type="login" pgnr=$oView->getActPage() tpl=$oViewConf->getActTplName() additional_form_parameters="`$AdditionalFormParameters`"|cat:$oViewConf->getNavFormParams() }]
+        [{oxid_include_dynamic file="dyn/cmp_login_links.tpl" type="login_links"}]
+    </div>
+    [{/if}]
 
-[{oxid_include_widget cl="oxwServiceMenu" _parent=$oView->getClassName() blLoginError=$blLoginError nocookie=$blAnon _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId() oxwtemplate="widget/servicemenu.tpl"}]
-
+    [{if $oViewConf->getShowFbConnect()}]
+        [{if !$oxcmp_user || ($oxcmp_user && $oView->isConnectedWithFb()) }]
+        <strong class="h2"><a id="test_RightSideNewsLetterHeader" rel="nofollow" href="[{ oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account"}]">[{ oxmultilang ident="INC_RIGHTITEM_FBCONNECT" }]</a></strong>
+        <div class="box" id="loginboxFbConnect">
+            [{include file="inc/facebook/fb_enable.tpl" source="dyn/cmp_fbconnect_right.tpl" ident="#loginboxFbConnect" }]
+        </div>
+        [{/if}]
+    [{/if}]
+	*}]
     [{if $oViewConf->showTs("WIDGET") && $oViewConf->getTsId() }]
         [{include file="inc/ts_ratings.tpl" }]
     [{/if}]
@@ -47,10 +64,12 @@
     </div>
 [{ /if }]
 
-[{if $oViewConf->getShowListmania() && $oView->getSimilarRecommListIds() }]
+[{if $oViewConf->getShowListmania()}]
+    [{if $oViewConf->getShowListmania() && $oView->getSimilarRecommListIds() }]
             [{oxid_include_widget nocookie=1 cl="oxwRecommendation" aArticleIds=$oView->getSimilarRecommListIds() searchrecomm=$oView->getRecommSearch() oxwtemplate="widget/recommendation.tpl"}]
-    {elseif $oViewConf->getShowListmania() && $oView->getRecommSearch()}]
+        [{elseif $oViewConf->getShowListmania() && $oView->getRecommSearch()}]
             [{oxid_include_widget nocookie=1 cl="oxwRecommendation" _parent=$oView->getClassName() searchrecomm=$oView->getRecommSearch() oxwtemplate="widget/recommendation.tpl"}]
+        [{/if}]
 [{/if}]
 
 [{ if $oView->getAccessoires() }]

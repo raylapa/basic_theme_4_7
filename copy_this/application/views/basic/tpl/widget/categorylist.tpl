@@ -41,8 +41,29 @@
 
               [{/if}]
             [{/foreach}]
-
+            
             [{if $iCatCnt > $oView->getTopNavigationCatCnt()}]
+                <li>
+                    [{assign var="_navcatmore" value=$oView->getCatMoreUrl()}]
+                    <a id="root[{$oView->getTopNavigationCatCnt()+1}]" href="[{ oxgetseourl ident="`$_navcatmore->closelink`&amp;cl=alist" }]" class="more[{if $_navcatmore->expanded}] exp[{/if}]">[{ oxmultilang ident="INC_HEADER_URLMORE" }] </a>
+                    [{strip}]
+                    <ul class="menue vertical dropdown ebne1">
+                    [{foreach from=$oxcmp_categories item=omorecat key=morecatkey name=more}]
+                      [{if $omorecat->getIsVisible() }]
+                        [{if $omorecat->getContentCats()}]
+                            [{foreach from=$omorecat->getContentCats() item=omorecont key=morecontkey name=morecont}]
+                            <li><a href="[{$omorecont->getLink()}]">[{$omorecont->oxcontents__oxtitle->value}] </a></li>
+                            [{/foreach}]
+                        [{/if}]
+                        <li><a id="test_Top_RootMore_MoreCat_[{$smarty.foreach.more.iteration}]" href="[{$omorecat->getLink()}]">[{$omorecat->oxcategories__oxtitle->value}] [{ if $omorecat->getNrOfArticles() > 0}] ([{$omorecat->getNrOfArticles()}])[{/if}] </a></li>
+                      [{/if}]
+                    [{/foreach}]
+                    </ul>
+                    [{/strip}]
+                </li>
+            [{/if}]
+
+            [{*if $iCatCnt > $oView->getTopNavigationCatCnt()}]
                 <li>
                     [{assign var="_navcatmore" value=$oView->getCatMore()}]
                     <a id="root[{$oView->getTopNavigationCatCnt()+1}]" href="[{ oxgetseourl ident="`$_navcatmore->closelink`&amp;cl=alist" }]" class="more[{if $_navcatmore->expanded}] exp[{/if}]">[{ oxmultilang ident="INC_HEADER_URLMORE" }] </a>
@@ -61,7 +82,7 @@
                     </ul>
                     [{/strip}]
                 </li>
-            [{/if}]
+            [{/if*}]
 
             </ul>
             <div class="clear"></div>
