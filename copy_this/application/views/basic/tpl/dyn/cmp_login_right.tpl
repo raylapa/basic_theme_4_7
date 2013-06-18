@@ -49,7 +49,7 @@
           [{$_login_additional_form_parameters}]
           <input type="hidden" name="fnc" value="logout">
           <input type="hidden" name="redirect" value="1">
-          <input type="hidden" name="cl" value="[{ $oViewConf->getActionClassName() }]">
+          <input type="hidden" name="cl" value="[{ $oViewConf->getTopActiveClassName() }]">
           <input type="hidden" name="lang" value="[{ $oViewConf->getActLanguageId() }]">
           <input type="hidden" name="pgNr" value="[{$_login_pgnr-1}]">
           <input type="hidden" name="tpl" value="[{$_login_tpl}]">
