@@ -17,7 +17,7 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 ('08a9473894d473f6ed28f04e80d929fc', 'oxbaseshop', 'theme:basic', 'bl_showCompareList', 'bool', 0x07),
 ('08acb2f595da54b5f865e54aa5cdb967', 'oxbaseshop', 'theme:basic', 'bl_showListmania', 'bool', 0x07),
 ('0ec4235c2aee774aa45d772875437919', 'oxbaseshop', 'theme:basic', 'sIconsize', 'str', 0x5d09ae6470),
-('0ec42a395d0595ee7741091898848474', 'oxbaseshop', 'theme:basic', 'iNewBasketItemMessage', 'select'),
+('0ec42a395d0595ee7741091898848474', 'oxbaseshop', 'theme:basic', 'iNewBasketItemMessage', 'select', ''),
 ('79e417a442934fcb9.117331841', 'oxbaseshop', 'theme:basic', 'bl_perfLoadCatTree', 'bool', 0x07),
 ('8563fba1c3936e4e0.645674481', 'oxbaseshop', 'theme:basic', 'blLoadFullTree', 'bool', ''),
 ('c20424bf2f8e71271.429555451', 'oxbaseshop', 'theme:basic', 'bl_perfLoadTreeForSearch', 'bool', 0x07);
